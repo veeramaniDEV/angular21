@@ -30,7 +30,6 @@
 .login-brand img {
     width: min(100%, 280px);
     height: auto;
-    /* filter: brightness(0) invert(1) */
 }
 
 .brand-message {

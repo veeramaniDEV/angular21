@@ -1,8 +1,17 @@
 <header class="topbar">
     <div class="brand-area"><a routerLink="/app/dashboard" class="brand" aria-label="CONNECT dashboard"><img
-                src="/images/connect-logo.png" alt="CONNECT" /></a><button type="button" class="icon-btn menu-btn"
-            (click)="menuToggle.emit()" [attr.aria-expanded]="menuOpen" aria-controls="main-sidebar"
-            aria-label="Toggle sidebar"><i class="pi pi-bars"></i></button></div>
+                src="/images/connect-logo.png" alt="CONNECT" /></a>
+
+
+        <button type="button" class="icon-btn menu-btn" (click)="menuToggle.emit()" [attr.aria-expanded]="menuOpen"
+            aria-controls="main-sidebar" aria-label="Toggle sidebar">
+            <i class="pi pi-bars"></i>
+        </button>
+    </div>
+
+
+
+
     <div class="topbar-right">
         <div class="search"><i class="pi pi-search" aria-hidden="true"></i><input type="search"
                 aria-label="Search workspace" placeholder="Search here..." [value]="query()"

@@ -1,8 +1,53 @@
-<div class="app-shell">
-  <app-topbar (menuToggle)="toggleSidebar()" [menuOpen]="sidebarOpen()" />
-  @if(sidebarOpen()){<button class="sidebar-backdrop" type="button" aria-label="Close menu" (click)="closeSidebar()"></button>}
-  <aside id="main-sidebar" class="shell-sidebar" [class.open]="sidebarOpen()" aria-label="Main navigation">
-    <app-sidebar (menuSelected)="closeSidebar()" />
+
+<div class="min-h-dvh bg-slate-50">
+
+  <!-- Topbar -->
+  <app-topbar
+    [menuOpen]="sidebarOpen() || !sidebarCollapsed()"
+    (menuToggle)="toggleSidebar()"
+  />
+
+  <!-- Mobile backdrop -->
+  @if (sidebarOpen()) {
+    <button
+      type="button"
+      aria-label="Close navigation menu"
+      (click)="closeSidebar()"
+      class="fixed inset-0 top-16 z-30
+             bg-slate-900/30 lg:hidden"
+    ></button>
+  }
+
+  <!-- Sidebar -->
+  <aside
+    id="main-sidebar"
+    aria-label="Main navigation"
+    class="sidebar"
+    [class.sidebar-open]="sidebarOpen()"
+    [class.sidebar-collapsed]="sidebarCollapsed()"
+  >
+    <app-sidebar
+      (menuSelected)="closeSidebar()"
+    />
   </aside>
-  <div class="shell-content"><main id="main-content" class="page-content"><router-outlet /></main><app-footer /></div>
+
+  <!-- Main content -->
+  <div
+    class="flex min-h-dvh flex-col pt-16
+           transition-all duration-300 ease-in-out"
+    [class.lg:pl-64]="!sidebarCollapsed()"
+    [class.lg:pl-0]="sidebarCollapsed()"
+  >
+
+    <main
+      id="main-content"
+      class="min-w-0 flex-1 p-4 sm:p-6"
+    >
+      <router-outlet />
+    </main>
+
+    <app-footer />
+
+  </div>
+
 </div>
