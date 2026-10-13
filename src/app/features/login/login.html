@@ -188,12 +188,16 @@
 
                 <!-- Remember + Forgot -->
                 <div class="flex flex-wrap items-center justify-between gap-3">
+
                     <div class="flex items-center gap-2">
-                        <p-checkbox formControlName="rememberMe" [binary]="true" inputId="rememberMe" />
+                        <p-checkbox formControlName="rememberMe" [binary]="true" inputId="rememberMe"
+                            styleClass="!inline-flex" />
+
                         <label for="rememberMe" class="cursor-pointer text-sm text-slate-700">
                             Remember me
                         </label>
                     </div>
+
 
                     <a href="mailto:admin@example.com?subject=Password%20reset%20request" class="text-sm font-semibold text-purple-700 no-underline
                    hover:text-pink-600 hover:underline">

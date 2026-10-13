@@ -16,7 +16,7 @@ import { ButtonModule } from 'primeng/button';
     standalone: true,
     imports: [
         ReactiveFormsModule,
-        RouterLink,
+        RouterLink, 
         InputTextModule,
         CheckboxModule,
         ButtonModule
