@@ -1,0 +1,18 @@
+<header class="topbar">
+    <div class="brand-area"><a routerLink="/app/dashboard" class="brand" aria-label="CONNECT dashboard"><img
+                src="/images/connect-logo.png" alt="CONNECT" /></a><button type="button" class="icon-btn menu-btn"
+            (click)="menuToggle.emit()" [attr.aria-expanded]="menuOpen" aria-controls="main-sidebar"
+            aria-label="Toggle sidebar"><i class="pi pi-bars"></i></button></div>
+    <div class="topbar-right">
+        <div class="search"><i class="pi pi-search" aria-hidden="true"></i><input type="search"
+                aria-label="Search workspace" placeholder="Search here..." [value]="query()"
+                (input)="query.set($any($event.target).value)" /></div><button type="button"
+            class="icon-btn notification" aria-label="Notifications" title="Notifications"><i
+                class="pi pi-bell"></i><span class="dot"></span></button>
+        <div class="profile"><button type="button" class="profile-trigger" (click)="toggleProfile()"
+                [attr.aria-expanded]="profileOpen()" aria-label="User menu"><span class="avatar">VA</span><span
+                    class="profile-name">Veera</span><i class="pi pi-angle-down"></i></button>@if(profileOpen()){<div
+                class="profile-menu"><a routerLink="/app/settings" (click)="profileOpen.set(false)">Settings</a><a
+                    routerLink="/login" (click)="profileOpen.set(false)">Sign out (demo)</a></div>}</div>
+    </div>
+</header>

@@ -1,0 +1,8 @@
+<div class="app-shell">
+  <app-topbar (menuToggle)="toggleSidebar()" [menuOpen]="sidebarOpen()" />
+  @if(sidebarOpen()){<button class="sidebar-backdrop" type="button" aria-label="Close menu" (click)="closeSidebar()"></button>}
+  <aside id="main-sidebar" class="shell-sidebar" [class.open]="sidebarOpen()" aria-label="Main navigation">
+    <app-sidebar (menuSelected)="closeSidebar()" />
+  </aside>
+  <div class="shell-content"><main id="main-content" class="page-content"><router-outlet /></main><app-footer /></div>
+</div>

@@ -1,0 +1,13 @@
+<nav class="side-nav" aria-label="Workspace pages">
+  <span class="nav-caption">WORKSPACE</span>
+  @for(item of menuItems;track item.route){
+  <a class="nav-item" [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+    ariaCurrentWhenActive="page" (click)="menuSelected.emit()"><i [class]="item.icon"
+      aria-hidden="true"></i><span>{{item.label}}</span></a>
+  }
+</nav>
+<div class="sidebar-art" aria-hidden="true">
+  <div class="art-wave wave-one"></div>
+  <div class="art-wave wave-two"></div>
+  <div class="art-wave wave-three"></div>
+</div>
