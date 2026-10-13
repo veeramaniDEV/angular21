@@ -7,14 +7,14 @@
     left: 0;
     top: 74px;
     bottom: 0;
-    width: 266px;
+    width: 250px;
     z-index: 35;
     background: #fff;
     border-right: 1px solid #edf0f7
 }
 
 .shell-content {
-    margin-left: 266px;
+    margin-left: 250px;
     padding-top: 74px;
     min-height: 100dvh;
     display: flex;
@@ -64,12 +64,13 @@
 
 
 
+
 .sidebar {
   position: fixed;
   top: 64px;
   left: 0;
   bottom: 0;
-  width: 256px;
+  width: 250px;
   z-index: 40;
   background: white;
   overflow-y: auto;
@@ -83,7 +84,6 @@
 }
 
 @media (min-width: 1024px) {
-
   .sidebar {
     transform: translateX(0);
   }
@@ -93,10 +93,11 @@
   }
 
   .content-normal {
-    padding-left: 256px;
+    padding-left: 250px;
   }
 
   .content-expanded {
     padding-left: 0;
   }
 }
+

@@ -1,1 +1,87 @@
- :host{display:block;position:relative;height:100%;overflow:hidden}.side-nav{position:relative;z-index:1;padding:23px 18px}.nav-caption{font-size:10px;font-weight:750;letter-spacing:2px;color:#a0a6bc;display:block;margin:0 18px 13px}.nav-item{display:flex;align-items:center;gap:19px;padding:14px 20px;margin-bottom:5px;border-radius:17px;color:#1b2547;font-size:14px;font-weight:560;transition:.18s}.nav-item i{font-size:20px;width:22px;text-align:center}.nav-item:hover{background:#f7f0ff;color:#9722c6}.nav-item.active{background:linear-gradient(100deg,#ffe8f6,#f4e8ff);color:#f31a9b;font-weight:700}.sidebar-art{position:absolute;bottom:0;left:0;right:0;height:250px;overflow:hidden;pointer-events:none;background:linear-gradient(150deg,transparent 22%,#faf0ff 72%)}.art-wave{position:absolute;width:380px;height:230px;left:-120px;bottom:-145px;border-radius:45%;transform:rotate(30deg);background:linear-gradient(120deg,#ffa3e1,#7e39f2)}.wave-two{left:-185px;bottom:-112px;background:linear-gradient(120deg,#ffc4f2,#e65ae6);opacity:.68}.wave-three{left:-35px;bottom:-195px;background:linear-gradient(120deg,#bd61f7,#5e22dc);opacity:.7}
+ :host {
+     display: block;
+     position: relative;
+     height: 100%;
+     overflow: hidden
+ }
+
+ .side-nav {
+     position: relative;
+     z-index: 1;
+     padding: 23px 16px
+ }
+
+ .nav-caption {
+     font-size: 10px;
+     font-weight: 750;
+     letter-spacing: 2px;
+     color: #a0a6bc;
+     display: block;
+     margin: 0 18px 13px
+ }
+
+ .nav-item {
+     display: flex;
+     align-items: center;
+     gap: 19px;
+     padding: 8px 16px;
+     margin-bottom: 5px;
+     border-radius: 12px;
+     color: #1b2547;
+     font-size: 14px;
+     font-weight: 560;
+     transition: .18s
+ }
+
+ .nav-item i {
+     font-size: 20px;
+     width: 22px;
+     text-align: center
+ }
+
+ .nav-item:hover {
+     background: #f7f0ff;
+     color: #9722c6
+ }
+
+ .nav-item.active {
+     background: linear-gradient(100deg, #ffe8f6, #f4e8ff);
+     color: #f31a9b;
+     font-weight: 700
+ }
+
+ .sidebar-art {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     height: 250px;
+     overflow: hidden;
+     pointer-events: none;
+     background: linear-gradient(150deg, transparent 22%, #faf0ff 72%)
+ }
+
+ .art-wave {
+     position: absolute;
+     width: 380px;
+     height: 230px;
+     left: -120px;
+     bottom: -145px;
+     border-radius: 45%;
+     transform: rotate(30deg);
+     background: linear-gradient(120deg, #ffa3e1, #7e39f2)
+ }
+
+ .wave-two {
+     left: -185px;
+     bottom: -112px;
+     background: linear-gradient(120deg, #ffc4f2, #e65ae6);
+     opacity: .68
+ }
+
+ .wave-three {
+     left: -35px;
+     bottom: -195px;
+     background: linear-gradient(120deg, #bd61f7, #5e22dc);
+     opacity: .7
+ }
