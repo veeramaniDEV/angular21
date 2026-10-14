@@ -11,7 +11,7 @@ ng serve
 mise exec -- npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4201/`. The application will automatically reload whenever you modify any of the source files.
+Once the server is running, open your browser and navigate to `http://localhost:4300/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding
 
