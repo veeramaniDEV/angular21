@@ -16,7 +16,10 @@ import { Footer } from '../../shared/footer/footer';
 })
 export class LandingLayout {
 
+  // Mobile sidebar visibility
   readonly sidebarOpen = signal(false);
+
+  // Desktop sidebar: expanded by default
   readonly sidebarCollapsed = signal(false);
 
   toggleSidebar(): void {
@@ -39,7 +42,7 @@ export class LandingLayout {
   @HostListener('window:resize')
   onResize(): void {
     if (window.innerWidth >= 1024) {
-      this.sidebarOpen.set(false);
+      this.closeSidebar();
     }
   }
 }

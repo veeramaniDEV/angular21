@@ -1,10 +1,40 @@
-<nav class="side-nav" aria-label="Workspace pages">
-  <!-- <span class="nav-caption">WORKSPACE</span> -->
-  @for(item of menuItems;track item.route){
-  <a class="nav-item" [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
-    ariaCurrentWhenActive="page" (click)="menuSelected.emit()"><i [class]="item.icon"
-      aria-hidden="true"></i><span>{{item.label}}</span></a>
-  }
+<nav class="p-3" aria-label="Workspace navigation">
+
+  <!-- Sidebar heading -->
+  <!-- <div class="mb-4 overflow-hidden whitespace-nowrap
+         px-3 text-xs font-semibold uppercase
+         tracking-wider text-slate-400">
+    @if (!collapsed) {
+    <span>Workspace</span>
+    } @else {
+    <span class="hidden lg:inline">&nbsp;</span>
+    <span class="lg:hidden">Workspace</span>
+    }
+  </div> -->
+
+  <ul class="space-y-2">
+
+    @for (item of menuItems; track item.route) {
+
+    <li>
+
+      <a [routerLink]="item.route" routerLinkActive="menu-active" [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page" [pTooltip]="collapsed ? item.label : ''" tooltipPosition="right"
+        [tooltipDisabled]="!collapsed" [showDelay]="200" [attr.aria-label]="item.label" (click)="menuSelected.emit()"
+        class="menu-link" [class.menu-link-collapsed]="collapsed">
+        <i [class]="item.icon" aria-hidden="true"></i>
+
+        <span class="menu-label" [class.menu-label-collapsed]="collapsed">
+          {{ item.label }}
+        </span>
+      </a>
+
+    </li>
+
+    }
+
+  </ul>
+
 </nav>
 <div class="sidebar-art" aria-hidden="true">
   <div class="art-wave wave-one"></div>

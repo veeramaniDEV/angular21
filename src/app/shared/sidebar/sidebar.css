@@ -58,7 +58,8 @@
      height: 250px;
      overflow: hidden;
      pointer-events: none;
-     background: linear-gradient(150deg, transparent 22%, #faf0ff 72%)
+     background: linear-gradient(150deg, transparent 22%, #faf0ff 72%);
+     z-index: -9
  }
 
  .art-wave {
@@ -84,4 +85,77 @@
      bottom: -195px;
      background: linear-gradient(120deg, #bd61f7, #5e22dc);
      opacity: .7
+ }
+
+
+
+ .menu-link {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+
+     /* min-height: 46px; */
+     padding: 8px 16px;
+
+     border-radius: 10px;
+
+     color: #596475;
+     font-size: 14px;
+     font-weight: 500;
+     text-decoration: none;
+
+     white-space: nowrap;
+     transition:
+         background-color 200ms ease,
+         color 200ms ease,
+         gap 200ms ease;
+ }
+
+ .menu-link:hover {
+     /* background: #f5f3ff;
+  color: #7c3aed; */
+     background: #f7f0ff;
+     color: #9722c6
+ }
+
+ .menu-link.menu-active {
+     /* background: #ede9fe;
+     color: #7c3aed;
+     font-weight: 600; */
+
+     background: linear-gradient(100deg, #ffe8f6, #f4e8ff);
+     color: #f31a9b;
+     font-weight: 700
+ }
+
+ .menu-link i {
+     flex-shrink: 0;
+     font-size: 18px;
+ }
+
+
+
+ /* Default menu text */
+ .menu-label {
+     opacity: 1;
+     overflow: hidden;
+     white-space: nowrap;
+     transition: opacity 150ms ease;
+ }
+
+ /* Mobile always displays full menu labels */
+ @media (min-width: 1024px) {
+
+     /* Collapsed icon alignment */
+     .menu-link-collapsed {
+         justify-content: center;
+         gap: 0;
+         padding: 12px 0;
+     }
+
+     /* Hide menu labels */
+     .menu-label-collapsed {
+         width: 0;
+         opacity: 0;
+     }
  }
